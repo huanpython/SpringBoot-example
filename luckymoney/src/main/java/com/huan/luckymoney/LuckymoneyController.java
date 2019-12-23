@@ -20,6 +20,9 @@ public class LuckymoneyController {
     @Autowired
     private LuckymoneyRepository repository;
 
+    @Autowired
+    private LuckymoneyService service;
+
     /*
     * 获取红包列表
     * */
@@ -54,7 +57,7 @@ public class LuckymoneyController {
     *
      更新红包
      */
-    @PutMapping
+    @PutMapping("/luckymoneys/{id}")
     public Luckymoney update(@PathVariable("id") Integer id,
                             @RequestParam("consumer") String consumer){
 
@@ -69,5 +72,10 @@ public class LuckymoneyController {
         return null;
 
     }
+    @GetMapping("/luckymoneys/two")
+    private void createTwo(){
+        service.createTwo();
+    }
+
 
 }
