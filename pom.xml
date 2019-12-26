@@ -10,6 +10,8 @@
 
     <modules>
         <module>luckymoney</module>
+        <module>springboot-mybatis-redis</module>
+        <module>springboot-mybaits-plus</module>
     </modules>
 
 
